@@ -107,7 +107,7 @@ class _FinalansState extends State<Finalans> {
                   SizedBox(height: 10),
                   Text(
                     "Category: ${_getCategory()}",
-                    style: TextStyle(color: Colors.white, fontSize: 22),
+                    style: TextStyle(color: Color(0xFF09FF7A), fontSize: 22),
                     textAlign: TextAlign.center,  // Center text horizontally
                   ),
                   SizedBox(height: 30),

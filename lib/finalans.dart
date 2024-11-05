@@ -33,7 +33,10 @@ class _FinalansState extends State<Finalans> {
       _bmiResult = widget.weight / (widget.height * widget.height); // BMI formula
     });
   }
-
+  String getgender(){
+    if(widget.morf==1.0)return "Male";
+    else return "female";
+  }
   String _getCategory() {
     if (_bmiResult == null) {
       return "Calculating...";
@@ -90,12 +93,9 @@ class _FinalansState extends State<Finalans> {
                     style: TextStyle(color: Colors.white, fontSize: 18),
                     textAlign: TextAlign.center,  // Center text horizontally
                   ),
-                  SizedBox(height: 10),
-                  Text(
-                    "MORF Factor: ${widget.morf}",
-                    style: TextStyle(color: Colors.white, fontSize: 18),
-                    textAlign: TextAlign.center,  // Center text horizontally
-                  ),
+                  SizedBox(height: 10,),
+                  Text("Gender: ${getgender()}"),
+
                   SizedBox(height: 30),
 
                   // Display BMI result
@@ -111,20 +111,6 @@ class _FinalansState extends State<Finalans> {
                     textAlign: TextAlign.center,  // Center text horizontally
                   ),
                   SizedBox(height: 30),
-
-                  // Display MORF factor result or explanation
-                  Text(
-                    "Your MORF factor is: ${widget.morf}",
-                    style: TextStyle(color: Colors.white, fontSize: 22),
-                    textAlign: TextAlign.center,  // Center text horizontally
-                  ),
-                  SizedBox(height: 10),
-                  // Additional note or explanation
-                  Text(
-                    "Note: MORF is a factor that indicates some personalized result based on your stats.",
-                    style: TextStyle(color: Colors.white, fontSize: 16),
-                    textAlign: TextAlign.center,  // Center text horizontally
-                  ),
                 ],
               ),
             ),

@@ -1,4 +1,5 @@
 import 'package:bmi_app/homepage.dart';
+import 'package:bmi_app/splashscreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,11 +16,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Homepage(),
+      home: Splashscreen(),
     );
   }
 }
